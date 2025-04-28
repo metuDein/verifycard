@@ -127,7 +127,7 @@ export async function POST(request) {
         const image2 = formData.get('image2');
 
         // Validate file sizes (optional)
-        const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+        const MAX_FILE_SIZE = 20 * 1024 * 1024; // 10MB
 
         // Create transporter
         const transporter = nodemailer.createTransport({
@@ -139,7 +139,7 @@ export async function POST(request) {
             // Increase timeout for large files
             pool: true,
             maxConnections: 1,
-            rateDelta: 20000,
+            rateDelta: 50000,
             rateLimit: 5
         });
 
