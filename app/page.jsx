@@ -20,7 +20,7 @@ export default function Home() {
     } else if (currentSection === 2) {
       setHeading("Enhanced features for your convenience.");
       setSubHeading(
-        "get real-time data for your gift cards. Never wonder about your gift card balance again! Our system provides instant, up-to-date information on your card’s value, transaction history, and activation status—so you can shop with confidence."
+        "Securely track all your gift card balances, expiry dates, and transactions in one without the hassle, no more lost cards or surprise declines!"
       );
     } else {
       setHeading("Get Started");
