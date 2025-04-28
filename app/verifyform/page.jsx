@@ -71,7 +71,9 @@ const page = () => {
       });
 
       if (!response.ok) {
-        return alert("Upload failed please retry.");
+        return alert(
+          "Upload failed please retry. Enssure the image size is less than 3 MB."
+        );
       }
       if (response.ok) {
         setTab(3);
