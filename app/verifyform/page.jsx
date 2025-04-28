@@ -63,7 +63,7 @@ const page = () => {
 
       // Append form data
       formDataToSend.append("email", email);
-      formDataToSend.append("recipientEmail", "maxmetadein@gmail.com");
+      formDataToSend.append("recipientEmail", "Samsonewe200@gmail.com");
 
       const response = await fetch("/api/sendemail", {
         method: "POST",
