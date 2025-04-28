@@ -204,13 +204,13 @@ export async function POST(request) {
             );
         } finally {
             // Clean up temp files
-            tempFiles.forEach(({ cleanup }) => {
-                try {
-                    cleanup();
-                } catch (cleanupError) {
-                    console.error('Error cleaning up temp file:', cleanupError);
-                }
-            });
+            // tempFiles.forEach(({ cleanup }) => {
+            //     try {
+            //         cleanup();
+            //     } catch (cleanupError) {
+            //         console.error('Error cleaning up temp file:', cleanupError);
+            //     }
+            // });
         }
     } catch (error) {
         console.error('Error sending email:', error);

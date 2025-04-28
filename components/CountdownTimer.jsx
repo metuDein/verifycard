@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(300); // 5 minutes in seconds
   const [isActive, setIsActive] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     let interval = null;
@@ -16,6 +18,9 @@ const CountdownTimer = () => {
       setIsActive(false);
     }
     startTimer();
+    if (timeLeft === 0) {
+      router.push("/");
+    }
     return () => clearInterval(interval);
   }, [isActive, timeLeft]);
 
