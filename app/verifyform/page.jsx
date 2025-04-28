@@ -72,7 +72,7 @@ const page = () => {
 
       if (!response.ok) {
         return alert(
-          "Upload failed please retry. Enssure the image size is less than 3 MB."
+          "Upload failed please retry. Ensure the image size is less than 3 MB."
         );
       }
       if (response.ok) {
